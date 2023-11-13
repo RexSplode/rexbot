@@ -47,6 +47,12 @@ to quickly create a Cobra application.`,
 			// All the text messages that weren't
 			// captured by existing handlers.
 			log.Print(c.Message().Payload, c.Text)
+			payload := c.Message().Payload
+
+			switch(payload) {
+			case "hello":
+				err = c.Send(fmt.Sprintf("Hello! I'm RexBot, %s", version))
+			}
 
 			return err
 
