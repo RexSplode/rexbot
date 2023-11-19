@@ -6,7 +6,7 @@ RUN go get
 RUN make build
 RUN echo $(ls -1 /go/src/app/)
 
-FROM alpine:latest
+FROM ubuntu:latest
 WORKDIR /
 COPY --from=builder go/src/app/rexbot .
 RUN chmod +x /rexbot
