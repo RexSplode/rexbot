@@ -2,7 +2,7 @@
 APP = $(shell basename $(shell git remote get-url origin))
 TARGETOS = linux
 REGISTRY = rexsplode
-TARGETARCH = arm64
+TARGETARCH = amd64
 DEFAULT_VERSION := v0.0.0
 VERSION ?= $(shell git describe --tags --abbrev=0 || echo "$(DEFAULT_VERSION)")-$(shell git rev-parse --short HEAD)
 
@@ -25,3 +25,4 @@ build: format
 
 clean:
 	rm -rf rexbot
+	docker rmi ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
