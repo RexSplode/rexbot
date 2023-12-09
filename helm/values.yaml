@@ -9,6 +9,7 @@ image:
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "v1.0.1-dd238ba-amd64"
+  arch: amd64
 
 secret:
   name: rexbot
