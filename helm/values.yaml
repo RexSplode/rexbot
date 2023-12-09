@@ -3,14 +3,12 @@
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
-
 image:
   repository: rexsplode
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.1-dd238ba-amd64"
+  tag: ""
   arch: amd64
-
 secret:
   name: rexbot
   tokenKey: token
