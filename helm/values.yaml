@@ -9,7 +9,7 @@ image:
   repository: "rexsplode/rexbot"
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "v1.0.0-f98d74d"
   os: linux
   arch: amd64
 secret:
