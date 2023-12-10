@@ -16,7 +16,7 @@ format:
 	go fmt ./
 
 image:
-	docker build . -t ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
+	docker build . -t ${REGISTRY}/${USERNAME}/${APP}:${VERSION}-${TARGETARCH}
 
 push:
 	docker push ${REGISTRY}/${USERNAME}/${APP}:${VERSION}-${TARGETARCH}
@@ -26,4 +26,4 @@ build: format
 
 clean:
 	rm -rf rexbot
-	docker rmi ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
+	docker rmi ${REGISTRY}/${USERNAME}/${APP}:${VERSION}-${TARGETARCH}
