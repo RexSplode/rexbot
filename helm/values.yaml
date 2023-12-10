@@ -12,7 +12,6 @@ image:
   tag: ""
   os: linux
   arch: amd64
-  
 secret:
   name: rexbot
   tokenKey: token
