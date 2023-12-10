@@ -42,7 +42,8 @@ jobs:
 
       - uses: mikefarah/yq@master
         with: 
-          - run: |
+          - name: updating a tag
+            run: |
              VERSION=$(git describe --tags --abbrev=0 || echo "v1.0.0")-$(git rev-parse --short HEAD)
              echo "VERSION=$VERSION" >> $GITHUB_ENV
 
