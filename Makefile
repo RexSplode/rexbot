@@ -5,7 +5,7 @@ REGISTRY = ghcr.io
 USERNAME = rexsplode
 OS = linux
 TARGETARCH = amd64
-DEFAULT_VERSION := v0.0.0
+DEFAULT_VERSION := v1.0.0
 VERSION ?= $(shell git describe --tags --abbrev=0 || echo "$(DEFAULT_VERSION)")-$(shell git rev-parse --short HEAD)
 
 lint:
