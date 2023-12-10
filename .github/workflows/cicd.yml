@@ -17,15 +17,16 @@ jobs:
       - name: Run test
         run: make test
 
-      - name: Docker hub login
-        uses: docker/login-action@v2
-        with: 
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: Bulid&push
         env:
           APP: rexbot
-          REGISTRY: ${{ secrets.DOCKERHUB_USERNAME }}
+          REGISTRY: ghcr.io
         run: make image push
   cd:
     name: CD
