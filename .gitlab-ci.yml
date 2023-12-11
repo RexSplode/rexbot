@@ -1,0 +1,6 @@
+run_tests:
+  image: golang:1.20
+  before_script:
+    - apt-get update && apt-get install make
+  script:
+    - make test
