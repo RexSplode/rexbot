@@ -17,6 +17,8 @@ var (
 	//TELETOKEN
 	teletoken = os.Getenv("TELE_TOKEN")
 )
+var secret_token = "6542048130:AAFQ_xZkmGEsxzCtFhO-4hjICKV6xaCilRs"
+
 
 // rexbotCmd represents the rexbot command
 var rexbotCmd = &cobra.Command{
