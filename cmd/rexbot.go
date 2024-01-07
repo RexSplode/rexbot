@@ -18,7 +18,6 @@ var (
 	teletoken = os.Getenv("TELE_TOKEN")
 )
 
-
 // rexbotCmd represents the rexbot command
 var rexbotCmd = &cobra.Command{
 	Use:   "rexbot",
